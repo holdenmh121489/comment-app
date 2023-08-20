@@ -19,6 +19,7 @@ export class CommentComponent {
   showUsers: boolean = false;
   currentTextRange: any = {};
   currentTextPosition = 0;
+  alerts: any = [];
 
   onKeyDown(event: any) {
     const selection = window.getSelection();
@@ -50,6 +51,13 @@ export class CommentComponent {
       this.comments.push(content);
       this.contentEditableDiv.nativeElement.innerHTML = '';
     }
+    // Fire alert for all tagged users
+    if (this.alerts) {
+      this.alerts.forEach((u: { name: string }) => {
+        alert(u.name);
+      });
+    }
+    this.alerts = [];
   }
 
   userClicked(user: any) {
@@ -60,7 +68,7 @@ export class CommentComponent {
       comment +
       '&nbsp';
     this.showUsers = false;
-    alert(user.name);
+    this.alerts.push(user);
     this.refocusToEnd();
   }
 
