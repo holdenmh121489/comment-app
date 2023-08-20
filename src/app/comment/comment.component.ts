@@ -8,7 +8,6 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class CommentComponent {
   @ViewChild('contentEditableDiv', { static: true })
   contentEditableDiv!: ElementRef;
-
   comments: string[] = [];
   users = [
     { userID: 1, name: 'Kevin' },

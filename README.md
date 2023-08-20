@@ -1,7 +1,15 @@
 # Comment App
 
 This application provides a simple commenting feature where users can view comments, add comments, and tag users in their comments.
+When a user is added a basic js alert is fired off with the user's name.
 This app was made with the requirement to not use an existing rich text editor or wysiwyg library
+
+## Screenshots
+
+<img src="screenshots/empty-state.png" width="400"/>
+<br>
+<br>
+<img src="screenshots/add-tagged-user.png" width="400">
 
 ## Prerequisites
 
