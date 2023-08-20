@@ -1,0 +1,72 @@
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  min-height: 4rem;
+  background-color: rgb(238, 233, 233);
+  font-size: 1.125rem;
+}
+
+.comment-input {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  min-height: 6.25rem;
+  max-width: 25rem;
+  outline: none;
+  margin-bottom: 1rem;
+}
+
+.comment {
+  padding: 0.5rem;
+  max-width: 25rem;
+}
+
+.comment:nth-child(odd) {
+  background-color: rgb(238, 233, 233);
+}
+
+/* Integrity check: Borrowed this styling
+*/
+.add-btn {
+  background-color: #2bcd51;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+}
+
+.users {
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.user {
+  cursor: pointer;
+  min-height: 1rem;
+  min-width: 100%;
+}
+
+.user:hover {
+  background-color: rgba(0, 0, 0, 0.163);
+  cursor: pointer;
+}

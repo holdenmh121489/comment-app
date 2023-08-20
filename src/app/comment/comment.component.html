@@ -1,0 +1,37 @@
+<div>
+  <h2>Comments</h2>
+  <!-- Empty state -->
+  <div *ngIf="comments.length === 0" class="empty-container">
+    No comments submitted
+  </div>
+  <div>
+    <div
+      *ngFor="let comment of comments"
+      [innerHTML]="comment"
+      class="comment"
+    ></div>
+  </div>
+</div>
+
+<div>
+  <h2>Add a Comment</h2>
+  <!-- Per instructions, do not use a wysiwyg library -->
+  <div
+    #contentEditableDiv
+    contenteditable="true"
+    (keydown)="onKeyDown($event)"
+    class="comment-input"
+  ></div>
+  <button class="add-btn" (click)="addComment()">Add</button>
+</div>
+
+<div
+  *ngIf="showUsers"
+  [style.left.px]="usersPosition.left"
+  [style.top.px]="usersPosition.top"
+  class="users"
+>
+  <div *ngFor="let user of users" class="user" (click)="userClicked(user)">
+    {{ user.name }}
+  </div>
+</div>
